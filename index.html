@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Assets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Add Property</title>
+</head>
+
+<body>
+  <div id="container" class=" lg:flex overflow-hidden">
+    <div id="left-side" class="bg-[#fafafa] shadow-2xl p-2 sm:p-5 h-6/12 xl:w-1/2">
+      <header class="text-center ml-6 font-bold uppercase text-lg">
+        <h1 class=" capitalize
+        inline-block
+        relative
+        cursor-pointer
+        transition-all
+        duration-500
+        before:content-['']
+        before:absolute
+        before:-bottom-2
+        before:left-0
+        before:w-0
+        before:h-1.5
+        before:rounded-full
+        before:opacity-0
+        before:transition-all
+        before:duration-500
+        before:bg-gradient-to-r
+        before:from-blue-600
+        before:via-slate-400
+        before:to-zinc-500
+        hover:before:w-full
+        hover:before:opacity-100">Add property</h1>
+      </header>
+
+      <div id="buttons" class="">
+
+        <div class="mt-10">
+          <div
+            class="w-44 xl:w-full md:w-6/12 lg:w-4/12 flex space-x-1 sm:space-x-[12.9rem] md:space-x-[21rem] lg:space-x-44 xl:space-x-60">
+
+            <div class="relative">
+              <input type="radio" name="user" id="user1" class="hidden peer">
+              <label for="user1"
+                class="flex items-center gap-4 py-4 pl-4 pr-32 lg:mb-0 mb-5 rounded-xl bg-white bg-opacity-90 backdrop-blur-2xl shadow-xl hover:bg-opacity-75 peer-checked:bg-[#9d7e2e] peer-checked:text-white cursor-pointer transition">
+                <img src="./Assets/images/rent-transformed.jpeg" alt="user photo"
+                  class="w-10 h-10 object-cover rounded-full">
+                <div>
+                  <h6 class="text-base font-medium">RENT</h6>
+                </div>
+              </label>
+              <div
+                class="flex absolute top-0 right-4 bottom-0 w-7 h-7 my-auto rounded-full bg-[#60a1f6] scale-0 peer-checked:scale-100 transition delay-100">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 text-white my-auto mx-auto"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="relative">
+              <input type="radio" name="user" id="user2" class="hidden peer">
+              <label for="user2"
+                class="flex items-center gap-4 py-4 pl-4 pr-32 rounded-xl bg-white bg-opacity-90 backdrop-blur-2xl shadow-xl hover:bg-opacity-75 peer-checked:bg-[#9d7e2e] peer-checked:text-white cursor-pointer transition">
+                <img src="./Assets/images/house-for-sale-logo-free-vector-2027.webp" alt="user photo"
+                  class="w-10 h-10 object-cover rounded-full">
+                <div>
+                  <h6 class="text-base font-medium">SELL</h6>
+                </div>
+              </label>
+              <div
+                class="flex absolute top-0 right-4 bottom-0 w-7 h-7 my-auto rounded-full bg-[#60a1f6] scale-0 peer-checked:scale-100 transition delay-100">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 text-white my-auto mx-auto"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex mt-10 justify-center ">
+            <div class="mx-auto max-w-6xl">
+              <div class="xl:flex  gap-3 ">
+
+                <label class="cursor-pointer">
+                  <input type="radio" class="peer sr-only" name="pricing" />
+                  <div
+                    class="w-56 xl:w-36 max-w-xl rounded-md bg-white p-5 text-gray-600 ring-2 xl:mb-0 mb-5 ring-transparent text-transparent transition-all hover:shadow peer-checked:text-[#9d7e2e] peer-checked:ring-[#60a1f6] peer-checked:ring-offset-2">
+                    <div class="flex flex-col gap-1">
+                      <div class="flex items-center justify-between">
+                        <p class="text-sm font-bold uppercase text-gray-500">house</p>
+                        <div>
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                              d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+
+                <label class="cursor-pointer">
+                  <input type="radio" class="peer sr-only" name="pricing" />
+                  <div
+                    class="w-56 xl:w-36 max-w-xl rounded-md bg-white p-5 text-gray-600 ring-2 xl:mb-0 mb-5 ring-transparent text-transparent transition-all hover:shadow peer-checked:text-[#9d7e2e] peer-checked:ring-[#60a1f6] peer-checked:ring-offset-2">
+                    <div class="flex flex-col gap-1">
+                      <div class="flex items-center justify-between">
+                        <p class="text-sm font-bold uppercase text-gray-500">flat</p>
+                        <div>
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                              d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="cursor-pointer">
+                  <input type="radio" class="peer sr-only" name="pricing" />
+                  <div
+                    class="w-56 xl:w-36 max-w-xl rounded-md bg-white p-5 text-gray-600 ring-2 xl:mb-0 mb-5 ring-transparent text-transparent transition-all hover:shadow peer-checked:text-[#9d7e2e] peer-checked:ring-[#60a1f6] peer-checked:ring-offset-2">
+                    <div class="flex flex-col gap-1">
+                      <div class="flex items-center justify-between">
+                        <p class="text-sm font-bold uppercase text-gray-500">plot</p>
+                        <div>
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                              d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="cursor-pointer">
+                  <input type="radio" class="peer sr-only" name="pricing" />
+                  <div
+                    class="w-56 xl:w-36 max-w-xl rounded-md bg-white p-5 text-gray-600 ring-2 ring-transparent text-transparent transition-all hover:shadow peer-checked:text-[#9d7e2e] peer-checked:ring-[#60a1f6] peer-checked:ring-offset-2">
+                    <div class="flex flex-col gap-1">
+                      <div class="flex items-center justify-between">
+                        <p class="text-sm font-bold uppercase text-gray-500">commercial</p>
+                        <div>
+                          <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                              d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form action="#" class="space-y-2 p-10">
+
+          <div class="flex justify-between">
+            <div class="w-36 sm:w-44 md:w-52 lg:w-44 xl:w-56 relative group">
+              <input type="text" id="username" required
+                class="w-full h-14 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+              <label for="username"
+                class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Title</label>
+            </div>
+
+            <br>
+
+            <div class="w-36 sm:w-44 md:w-52 lg:w-44 xl:w-56  relative group">
+              <input type="text" id="username" required
+                class="w-full h-14 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+              <label for="username"
+                class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Description</label>
+            </div>
+          </div>
+
+          <br>
+
+
+          <div class=" w-44 sm:w-56 md:w-72 xl:w-56 relative group m-auto">
+            <input type="text" id="username" required
+              class="w-full h-10 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+            <label for="username"
+              class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-[70px] sm:pl-3 xl:pl-[100px] text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Slug</label>
+          </div>
+
+          <br>
+
+          <div class="flex justify-between">
+            <div class="w-36 sm:w-44 md:w-52 lg:w-44 xl:w-56 relative group">
+              <input type="text" id="username" required
+                class="w-full h-10 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+              <label for="username"
+                class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Zip
+                Code</label>
+            </div>
+
+            <br>
+
+            <div class="w-36 sm:w-44 md:w-52 lg:w-44 xl:w-56 relative group">
+              <input type="text" id="username" required
+                class="w-full h-10 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+              <label for="username"
+                class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Land
+                Area</label>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="flex justify-between">
+            <div class="w-36 sm:w-44 md:w-52 lg:w-44 xl:w-56 relative group">
+              <input type="text" id="username" required
+                class="w-full h-10 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+              <label for="username"
+                class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Bedrooms</label>
+            </div>
+
+            <br>
+
+            <div class="w-36 sm:w-44 md:w-52 lg:w-44 xl:w-56 relative group">
+              <input type="text" id="username" required
+                class="w-full h-10 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+              <label for="username"
+                class="transform transition-all absolute top-0 left-0 h-full flex items-center pl-2 text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Bathrooms</label>
+            </div>
+          </div>
+
+          <br>
+
+          <hr>
+
+          <br>
+
+          <div class="sm:flex">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                Swimming Pool
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                Stories
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Single Story</option>
+                  <option>Double Story</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                emergency exit
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="sm:flex">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                fire place
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                laundry room
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                jog path
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="flex justify-center mb-5">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-center text-gray-700 text-xs font-bold mb-2"
+                for="grid-state">
+                ceilings
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-center text-gray-700 text-xs font-bold mb-2"
+                for="grid-state">
+                dual sink
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="flex justify-center">
+            <button class="flex">
+              <a href="#_"
+                class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group">
+                <span
+                  class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#60a1f6] rounded-full group-hover:w-56 group-hover:h-56"></span>
+                <span
+                  class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                <span class="relative">Publish</span>
+              </a>
+            </button>
+          </div>
+          <br>
+          <br>
+
+          <hr>
+
+          <br>
+
+          <div class=" w-44 sm:w-56 md:w-72 xl:w-96 relative group m-auto">
+            <input type="text" id="username" required
+              class="w-full h-10 px-4 text-sm peer bg-gray-200 rounded outline-1 outline-[#60a1f6]">
+            <label for="username"
+              class="transform transition-all absolute top-0 left-0 h-full flex items-center font-medium pl-[70px] sm:pl-3 xl:pl-[170px] text-sm group-focus-within:text-xs peer-valid:text-xs group-focus-within:h-1/2 peer-valid:h-1/2 group-focus-within:-translate-y-full peer-valid:-translate-y-full group-focus-within:pl-0 peer-valid:pl-0">Email</label>
+          </div>
+
+          <br>
+
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0 xl:ml-[100px]">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                city
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Karachi</option>
+                  <option>Lahore</option>
+                  <option>Islamabad</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0 xl:ml-[100px]">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                city
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Pakistan</option>
+                  <option>India</option>
+                  <option>Bangladesh</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0 xl:ml-[100px]">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                gender
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus outline-1:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+
+        </form>
+
+      </div>
+    </div>
+
+    <div id="left-side">
+      <div class="border-4 border-black h-[700px] lg:w-[400px] xl:h-[1000px] xl:w-[676px]">
+        <div class="mt-52">
+          <input type="text">
+          <div><a href="#"><img src="./Assets/images/+.png" alt="" class="m-auto h-44 w-44"></a></div>
+          <div class="uppercase text-3xl font-bold text-center mt-10">
+            <p>Upload an Image</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center xl:block p-10">
+        <button class="xl:ml-[27rem]">
+          <a href="#_"
+            class="relative inline-flex items-center justify-start px-14 py-3 overflow-hidden font-medium transition-all bg-[#60a1f6] rounded-xl group">
+            <span
+              class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-[#9d7e2e] rounded group-hover:-mr-4 group-hover:-mt-4">
+              <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+            </span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-[#9d7e2e] rounded-xl group-hover:mb-12 group-hover:translate-x-0"></span>
+            <span
+              class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Submit</span>
+          </a></button>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
